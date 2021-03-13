@@ -1,22 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import {useAuth0} from "@auth0/auth0-react";
 
 function App() {
+  const {loginWithRedirect} = useAuth0();
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
+        <button
           className="App-link"
-          href="https://reactjs.org"
+          onClick={() => {loginWithRedirect()}}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-        </a>
+          Login
+        </button>
       </header>
     </div>
   );
