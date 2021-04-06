@@ -1,5 +1,9 @@
 # Getting Started 
 
+### `npm install`
+
+install semua depedency
+
 ### `npm start`
 
 Run aplikasi di development mode.
