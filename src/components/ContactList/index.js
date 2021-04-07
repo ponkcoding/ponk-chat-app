@@ -17,7 +17,7 @@ const ContactList = (props) => {
 
   return (
     <ListItem button key={user.id} className={classes.root}>
-      <img alt="" src={user.img} className={classes.img}></img>
+      <img alt="" src={user.picture} className={classes.img}></img>
       <ListItemText primary={user.name} />
     </ListItem>
   );
