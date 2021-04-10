@@ -16,14 +16,15 @@ const Contact = () => {
   const { data } = useQuery(GET_USERS, {
     variables: { order_by: { name: "asc" } },
   });
-  console.log("data", data);
+  const users = [{ id: null, name: "LOBI" }];
+  if (data && data.users) {
+    users.push(...data.users);
+  }
   return (
     <div>
-      <ContactList user={{ id: null, name: "LOBI" }}></ContactList>
-      <Divider></Divider>
-      {data.users.map((u) => {
+      {users.map((u) => {
         return (
-          <div>
+          <div key={u.id}>
             <ContactList user={u}></ContactList>
             <Divider></Divider>
           </div>
