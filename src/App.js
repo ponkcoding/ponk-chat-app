@@ -16,6 +16,7 @@ import {
   ApolloLink,
 } from "@apollo/client";
 import { useState } from "react";
+import { RecoilRoot } from "recoil";
 
 function App() {
   const {
@@ -81,7 +82,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {isAuthenticated ? (
-        <Main></Main>
+        <RecoilRoot>
+          <Main></Main>
+        </RecoilRoot>
       ) : (
         <div className="App">
           <header className="App-header">

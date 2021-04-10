@@ -6,11 +6,11 @@ import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
-import MessageBubble from "../../components/MessageBubble";
 import Contact from "./Contact";
+import Message from "./Message";
+import MessageHeader from "./MessageHeader";
 
 const drawerWidth = 300;
 
@@ -107,9 +107,7 @@ const Main = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Armin
-          </Typography>
+          <MessageHeader></MessageHeader>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -147,20 +145,7 @@ const Main = (props) => {
         <div className={classes.toolbar} />
 
         <div className={classes.chatContent}>
-          <MessageBubble
-            isMe={false}
-            message={{
-              message: "ini contoh dummy message",
-              createdAt: "22 Feb 2021",
-            }}
-          ></MessageBubble>
-          <MessageBubble
-            isMe={true}
-            message={{
-              message: "ini contoh dummy message dari saya",
-              createdAt: "22 Feb 2021",
-            }}
-          ></MessageBubble>
+          <Message></Message>
         </div>
 
         <div className={classes.chatFooter}>
