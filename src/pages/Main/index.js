@@ -7,10 +7,10 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { TextField } from "@material-ui/core";
 import Contact from "./Contact";
 import Message from "./Message";
 import MessageHeader from "./MessageHeader";
+import MessageForm from "./MessageForm";
 
 const drawerWidth = 300;
 
@@ -149,16 +149,7 @@ const Main = (props) => {
         </div>
 
         <div className={classes.chatFooter}>
-          <form className={classes.messageForm} noValidate autoComplete="off">
-            <TextField
-              id="input-message"
-              className={classes.messageForm.input}
-              variant="outlined"
-              placeholder="type your message..."
-              fullWidth={true}
-              style={{ background: "#fff" }}
-            />
-          </form>
+          <MessageForm></MessageForm>
         </div>
       </main>
     </div>
