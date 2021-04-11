@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "env-cmd": "^10.1.0",
     "graphql": "^15.5.0",
     "moment": "^2.29.1",
     "react": "^17.0.1",
@@ -23,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:prod": "env-cmd -f .env.prod npm run-script build"
   },
   "eslintConfig": {
     "extends": [
