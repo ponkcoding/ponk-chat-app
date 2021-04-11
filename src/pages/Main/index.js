@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
     height: "calc(100% - 100px)",
     paddingLeft: theme.spacing(4),
     overflowY: "scroll",
+    overflowX: "hidden",
   },
   messageForm: {
     overflow: "hidden",
