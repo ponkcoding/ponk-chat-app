@@ -42,8 +42,16 @@ const Message = () => {
   }
   const { data } = useSubscription(GET_MESSAGES, { variables: params });
   console.log("data", data);
+
+  setTimeout(() => {
+    const cb = document.getElementById("chat-content").parentElement;
+    if (cb) {
+      cb.scrollTop = cb.scrollHeight;
+    }
+  }, 200);
+
   return (
-    <div>
+    <div id="chat-content">
       {data?.messages.map((m) => {
         return (
           <MessageBubble
